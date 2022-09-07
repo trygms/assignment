@@ -1,0 +1,10 @@
+.banner {
+  background: url(./img/banner.jpeg) no-repeat center center;
+  background-size: cover;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  color: red;
+  height: 100vh;
+}
+
+https: //harveycla.github.io/HarveyTech_with_Bootstrap5/#services;
