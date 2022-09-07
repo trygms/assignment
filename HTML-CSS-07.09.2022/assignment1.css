@@ -1,0 +1,33 @@
+.fa-solid,
+.fa-brands {
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+a {
+  transition: all 0.6s;
+}
+
+.murat {
+  background-color: darkred;
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .murat {
+    background-color: salmon;
+    display: flex;
+    /* flex-direction: row; */
+  }
+
+  .burger {
+    display: flex;
+    /* border: 2px solid red; */
+
+    justify-content: end;
+    align-items: center;
+  }
+}
