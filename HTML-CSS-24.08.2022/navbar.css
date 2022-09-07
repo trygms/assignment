@@ -1,0 +1,115 @@
+@import url(theme.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  /* margin-top: 80px; */
+  margin: 80px auto;
+  width: 99.8%;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  height: 80px;
+  justify-content: space-around;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 170, 255, 1) 0%,
+    rgba(3, 232, 169, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.leftSide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 35%;
+  padding-left: 20px;
+}
+
+.leftSide .fa-house {
+  color: black;
+  transition: all 0.5s;
+}
+
+.leftSide .fa-house:hover {
+  color: var(--turuncu);
+  transform: scale(1.3) rotate(360deg);
+}
+
+.menu {
+  background-color: var(--koyu-kirmizi);
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-grow: 3;
+  border: 4px solid gray;
+  border-radius: 10px;
+  min-height: 80px;
+  transition: all 0.5s;
+}
+
+.menu:hover {
+  border: 4px solid gray;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.menu a:hover {
+  color: var(--tropikal-yesil1);
+  border: 1px solid var(--mavi-11);
+  background-color: var(--mavi-11);
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+.rightSide {
+  padding-right: 20px;
+  flex-wrap: nowrap;
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+}
+
+.rightSide a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.4s;
+}
+
+.rightSide a .fa-square-twitter,
+.fa-square-facebook,
+.fa-square-instagram {
+  transition: all 0.5s;
+}
+.rightSide a .fa-square-twitter:hover {
+  color: #1d9bf0;
+  transform: scale(1.3) rotate(360deg);
+}
+.rightSide a .fa-square-facebook:hover {
+  color: #1877f2;
+  transform: scale(1.3) rotate(360deg);
+}
+.rightSide a .fa-square-instagram:hover {
+  color: #f77737;
+  transform: scale(1.3) rotate(360deg);
+}

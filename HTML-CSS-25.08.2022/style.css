@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 500px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.main {
+  background-color: black;
+  color: white;
+  height: 840px;
+  border-radius: 50px;
+  width: 500px;
+  margin: 50px auto;
+  padding: 1rem;
+  display: grid;
+  gap: 10px;
+  font-family: Helvetica;
+}
+
+.display {
+  height: 180px;
+  width: 100%;
+  padding: 20px;
+}
+
+.button {
+  background-color: #a5a5a5;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  cursor: pointer;
+  margin: auto;
+  transition: all 0.4s;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+.button.top {
+  color: black;
+}
+
+.number {
+  background-color: #333;
+  color: white;
+}
+.opr {
+  background-color: #f1a33c;
+}
+
+.button.n0 {
+  width: 220px;
+  border-radius: 55px;
+  justify-content: flex-start;
+  padding-left: 42px;
+}
