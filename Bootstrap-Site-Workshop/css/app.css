@@ -65,7 +65,16 @@
 }
 
 /*! ------------ 3- ABOUT SECTION ----------- */
-
+ol li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ol li:first-child {
+  background-color: rgb(20, 65, 250);
+  color: white;
+}
 /*! ------------- 4- INSTRUCTORS -------------*/
 
 section#instructors .card {
