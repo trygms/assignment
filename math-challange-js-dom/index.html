@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>Math Challange</title>
   </head>
-  <body>
+  <body class="bg-info">
+    <div class="container bg-primary text-center text-light pb-3">
+      <header class="display-2 mb-3">4 İşlem Matematik Oyunu</header>
+      <div class="main d-flex justify-content-center">
+        <span id="number1" class="fs-1 me-2">0</span>
+        <span id="operator" class="fs-1 me-2">+</span>
+        <span id="number2" class="fs-1 me-2">0</span>
+        <span class="fs-1 me-2">=</span>
+        <input type="text" id="result" class="" />
+        <input
+          type="button"
+          id="okey"
+          value="OK"
+          class="btn btn-info text-light opacity-75 ms-3" />
+
+        <div class="clearfix mb-3"></div>
+      </div>
+      <div class="row d-flex justify-content-center p-4">
+        <div id="correct" class="col-1 fs-1 me-2 bg-success p-1">0</div>
+        <div id="wrong" class="col-1 fs-1 bg-danger p-1">0</div>
+      </div>
+    </div>
     <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
   </body>
 </html>
