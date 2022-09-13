@@ -92,7 +92,7 @@ buttonOk.onclick = function () {
     window.location.reload();
   }
   if (wrong.textContent == "10") {
-    alert("YOU'RE LOOSER 😥");
+    alert("YOU FAILED 😥");
     window.location.reload();
   }
   newQuestion();
