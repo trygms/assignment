@@ -55,6 +55,12 @@ window.onload = function () {
 
 //? Result and Button
 
+result.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    buttonOk.onclick();
+  }
+});
+
 buttonOk.onclick = function () {
   let res, n1, n2;
   s1 = Number(number1.textContent);
