@@ -83,8 +83,10 @@ buttonOk.onclick = function () {
   }
   if (result.value == res) {
     correct.textContent = Number(correct.textContent) + 1;
+    result.value = "";
   } else {
     wrong.textContent = Number(wrong.textContent) + 1;
+    result.value = "";
   }
 
   if (correct.textContent == "10") {
