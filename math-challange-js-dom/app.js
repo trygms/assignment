@@ -17,6 +17,7 @@ result = document.querySelector("#result");
 buttonOk = document.getElementById("btnOkey");
 correct = document.querySelector("#correct");
 wrong = document.getElementById("wrong");
+let audio = document.getElementById("audio");
 
 //? Functions
 
@@ -63,20 +64,20 @@ result.addEventListener("keydown", (event) => {
 
 buttonOk.onclick = function () {
   let res, n1, n2;
-  s1 = Number(number1.textContent);
-  s2 = Number(number2.textContent);
+  n1 = Number(number1.textContent);
+  n2 = Number(number2.textContent);
   switch (operator.textContent) {
     case "+":
-      res = s1 + s2;
+      res = n1 + n2;
       break;
     case "-":
-      res = s1 - s2;
+      res = n1 - n2;
       break;
     case "*":
-      res = s1 * s2;
+      res = n1 * n2;
       break;
     case "/":
-      res = s1 / s2;
+      res = n1 / n2;
       break;
     default:
       break;

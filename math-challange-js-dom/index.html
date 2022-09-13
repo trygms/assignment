@@ -12,26 +12,28 @@
     <link rel="stylesheet" href="style.css" />
     <title>Math Challange | Captain Price</title>
   </head>
-  <body class="bg-dark">
-    <div class="container bg-primary text-center text-light pb-4 pt-2">
-      <header class="display-2 mb-3">Math 4 Operators Challange</header>
-      <div class="main d-flex justify-content-center pt-3">
-        <span id="number1" class="fs-1 me-2">0</span>
-        <span id="operator" class="fs-1 me-2">+</span>
-        <span id="number2" class="fs-1 me-2">0</span>
-        <span class="fs-1 me-2">=</span>
-        <input type="text" id="result" class="" />
-        <input
-          type="button"
-          id="btnOkey"
-          value="OK"
-          class="btn btn-info text-light opacity-75 ms-3 button" />
+  <body>
+    <div class="main1">
+      <div class="container text-light pb-4 pt-2 text-center">
+        <header class="display-2 mb-3 p-2">Math 4 Operators Challange</header>
+        <div class="main d-flex justify-content-center pt-3">
+          <span id="number1" class="fs-1 me-2">0</span>
+          <span id="operator" class="fs-1 me-2">+</span>
+          <span id="number2" class="fs-1 me-2">0</span>
+          <span class="fs-1 me-2">=</span>
+          <input type="text" id="result" class="input-box" />
+          <input
+            type="button"
+            id="btnOkey"
+            value="OK"
+            class="btn opacity-75 ms-3 button" />
 
-        <div class="clearfix mb-3"></div>
-      </div>
-      <div class="row d-flex justify-content-center p-4">
-        <div id="correct" class="col-1 fs-1 me-2 bg-success p-1">0</div>
-        <div id="wrong" class="col-1 fs-1 bg-danger p-1">0</div>
+          <div class="clearfix mb-3"></div>
+        </div>
+        <div class="row d-flex justify-content-center p-4">
+          <div id="correct" class="col-1 fs-1 me-2 p-1 box boxC">0</div>
+          <div id="wrong" class="col-1 fs-1 p-1 box boxD">0</div>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>
