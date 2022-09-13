@@ -106,8 +106,7 @@ buttonOk.onclick = function () {
 let timeleft = 10;
 let downloadTimer = setInterval(function () {
   if (timeleft <= 0) {
-    document.getElementById("countdown").innerHTML = "Finished";
-
+    document.getElementById("countdown").innerHTML = "Time is Up";
     timeleft = 10;
     buttonOk.onclick();
     newQuestion();
