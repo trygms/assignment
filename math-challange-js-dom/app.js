@@ -29,6 +29,7 @@ randomFunc = function (small, big) {
 };
 
 function newQuestion() {
+  setInterval(downloadTimer);
   let opts = ["+", "-", "*", "/"];
   operator.textContent = opts[randomFunc(0, 4)]; //* random operator icin
 
@@ -98,5 +99,20 @@ buttonOk.onclick = function () {
     alert("YOU FAILED 😥");
     window.location.reload();
   }
+  timeleft = 10;
   newQuestion();
 };
+
+let timeleft = 10;
+let downloadTimer = setInterval(function () {
+  if (timeleft <= 0) {
+    document.getElementById("countdown").innerHTML = "Finished";
+
+    timeleft = 10;
+    buttonOk.onclick();
+    newQuestion();
+  } else {
+    document.getElementById("countdown").textContent = timeleft + "";
+  }
+  timeleft -= 1;
+}, 1000);
