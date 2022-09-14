@@ -131,3 +131,8 @@ let downloadTimer = setInterval(function () {
   }
   timeleft -= 1;
 }, 1000);
+
+let time = 0;
+let countTimer = setInterval(function () {
+  time += 1;
+}, 1000);
