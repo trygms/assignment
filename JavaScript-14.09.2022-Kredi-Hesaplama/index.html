@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container d-flex flex-column">
+      <h1 class="text-center display-1">Captain Price Bank</h1>
+      <h2 class="text-center display-2">Kredi Hesaplama</h2>
+      <h1 class="d-flex justify-content-center text-center">
+        Captain Price Online Kredi Hesaplama Sitesine Hoşgeldiniz
+      </h1>
+      <h2 class="text-center">Devam etmek için butona Tıklayınız</h2>
+      <button class="btn btn-danger" id="devam">Devam</button>
+
+      <div class="container d-flex justify-content-around col-12 kredi-turu">
+        <div class="fs-5">
+          <button class="button" id="ihtiyac">
+            <i class="fa-regular fa-money-bill-1 fa-5x"></i>
+          </button>
+          <br />
+          İhtiyaç Kredisi
+        </div>
+        <div class="fs-5">
+          <button class="button" id="ev">
+            <i class="fa-solid fa-house-chimney fa-5x"></i>
+          </button>
+          <br />Ev Kredisi
+        </div>
+        <div class="fs-5">
+          <button class="button" id="araç">
+            <i class="fa-solid fa-car fa-5x"></i>
+          </button>
+          <br />Araç Kredisi
+        </div>
+        <div class="fs-5">
+          <button class="button" id="kobi">
+            <i class="fa-solid fa-shop fa-5x"></i>
+          </button>
+          <br />KOBİ Kredisi
+        </div>
+      </div>
+      <div class="bankalar mt-4 mb-4">
+        <div class="d-flex justify-content-around col-12">
+          <button id="akbank"><img src="./img/akbank.png" alt="" /></button>
+          <button id="denizbank">
+            <img src="./img/denizbank.png" alt="" />
+          </button>
+          <button id="enpara"><img src="./img/enpara.png" alt="" /></button>
+          <button id="garanti"><img src="./img/garanti.png" alt="" /></button>
+          <button id="halkbank"><img src="./img/halkbank.png" alt="" /></button>
+          <button id="ing">
+            <img src="./img/ing.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="vade-tutar">
+        <p class="display-5">Vade</p>
+        <input
+          type="text"
+          id="vade"
+          class="col-12 input-group-text text-start input-box" />
+        <p class="display-5">Tutar</p>
+        <input
+          type="text"
+          id="tutar"
+          class="col-12 input-group-text text-start input-box" />
+      </div>
+      <button class="btn btn-danger mt-5" id="hesapla">Hesapla</button>
+
+      <table class="table">
+        <thead>
+          <h1>Kredi Bilgileri</h1>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <td><b> Kredi Miktarı</b></td>
+            <td>??????</td>
+            <td><b>Kredi Tipi</b></td>
+            <td>???????</td>
+          </tr>
+          <tr>
+            <td><b>Vade<</b>/td></td>
+            <td>??????</td>
+            <td><b>Faiz Oranı</b></td>
+            <td>??????</td>
+          </tr>
+          <tr>
+            <td><b>Toplam Tutar</b></td>
+            <td>????????</td>
+            <td><b>Taksit</b></td>
+            <td>????????</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
