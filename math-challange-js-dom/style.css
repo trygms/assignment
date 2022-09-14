@@ -51,5 +51,20 @@ body {
   background-color: #3e8914;
 }
 
-.boxCounter {
+.buttonTry {
+  margin-top: 1rem;
+  background-color: #c874d9;
+  font-size: 2rem;
+  opacity: 75%;
+  transition: all 0.2s;
+}
+
+.buttonTry:hover {
+  background-color: #c874d9 !important;
+  color: white !important;
+  opacity: 100%;
+}
+
+.buttonTry:active {
+  transform: scale(0.95);
 }

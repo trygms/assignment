@@ -34,13 +34,13 @@ function newQuestion() {
   operator.textContent = opts[randomFunc(0, 4)]; //* random operator icin
 
   if (operator.textContent === "*") {
-    number1.textContent = randomFunc(0, 20);
+    number1.textContent = randomFunc(0, 30);
     number2.textContent = randomFunc(0, 20);
   } else if (operator.textContent === "/") {
     //* kalansiz bolme icin
-    number1.textContent = randomFunc(0, 20);
+    number1.textContent = randomFunc(1, 200);
     while (true) {
-      number2.textContent = randomFunc(0, 20);
+      number2.textContent = randomFunc(1, 200);
       if (number1.textContent % number2.textContent == 0) {
         break;
       }
@@ -86,18 +86,34 @@ buttonOk.onclick = function () {
   if (result.value == res) {
     correct.textContent = Number(correct.textContent) + 1;
     result.value = "";
+    document.getElementById("countdown").innerHTML = "Correct ✅";
   } else {
     wrong.textContent = Number(wrong.textContent) + 1;
     result.value = "";
+    document.getElementById("countdown").innerHTML = "Wrong ❌";
   }
 
   if (correct.textContent == "10") {
-    alert("YOU'RE WINNER 😍");
-    window.location.reload();
+    // alert("YOU'RE WINNER 😍");
+    // window.location.reload();
+    document.querySelector(".change-class1").classList.add("d-none");
+    document.querySelector(".change-class2").classList.add("d-none");
+    document.getElementById("try-again").classList.remove("d-none");
+    document.getElementById("lastmessage").innerText = "YOU'RE WINNER 😍";
+    document.getElementById("try-again").addEventListener("click", () => {
+      window.location.reload();
+    });
   }
   if (wrong.textContent == "10") {
-    alert("YOU FAILED 😥");
-    window.location.reload();
+    // alert("YOU FAILED 😥");
+    // window.location.reload();
+    document.querySelector(".change-class1").classList.add("d-none");
+    document.querySelector(".change-class2").classList.add("d-none");
+    document.getElementById("try-again").classList.remove("d-none");
+    document.getElementById("lastmessage").innerText = "YOU FAILED 😥";
+    document.getElementById("try-again").addEventListener("click", () => {
+      window.location.reload();
+    });
   }
   timeleft = 10;
   newQuestion();

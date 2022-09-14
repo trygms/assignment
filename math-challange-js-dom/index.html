@@ -16,7 +16,7 @@
     <div class="main1">
       <div class="container text-light pb-4 pt-2 text-center">
         <header class="display-2 mb-3 p-2">Math 4 Operators Challange</header>
-        <div class="main d-flex justify-content-center pt-3">
+        <div class="main d-flex justify-content-center pt-3 change-class1">
           <span id="number1" class="fs-1 me-2">0</span>
           <span id="operator" class="fs-1 me-2">+</span>
           <span id="number2" class="fs-1 me-2">0</span>
@@ -30,12 +30,14 @@
 
           <div class="clearfix mb-3"></div>
         </div>
-        <div class="row d-flex justify-content-center p-4">
+        <div class="row d-flex justify-content-center p-4 change-class2">
           <div id="correct" class="col-1 fs-1 me-2 p-1 box boxC">0</div>
           <div id="wrong" class="col-1 fs-1 p-1 box boxD">0</div>
           <div class="clearfix"></div>
-          <div id="countdown" class="col-2 fs-1 box boxCounter mt-3"></div>
+          <div id="countdown" class="col-3 fs-1 box boxCounter mt-3"></div>
         </div>
+        <div id="lastmessage" class="fs-1"></div>
+        <button id="try-again" class="btn buttonTry d-none">Try Again</button>
       </div>
     </div>
     <script src="app.js"></script>
