@@ -21,8 +21,6 @@
   </head>
   <body>
     <main class="container d-flex flex-column">
-      <h1 class="text-center display-1">Captain Price Bank</h1>
-      <h2 class="text-center display-2">Kredi Hesaplama</h2>
       <h1 class="d-flex justify-content-center text-center">
         Captain Price Online Kredi Hesaplama Sitesine Hoşgeldiniz
       </h1>
@@ -59,9 +57,11 @@
           <br />KOBİ Kredisi
         </div>
       </div>
-      <div class="bankalar mt-4 mb-4">
+      <div class="bankalar mt-4 mb-4 d-none">
         <div class="d-flex justify-content-around col-12">
-          <button id="akbank"><img src="./img/akbank.png" alt="" /></button>
+          <button id="akbank">
+            <img src="./img/akbank.png" alt="" /> <br />
+          </button>
           <button id="denizbank">
             <img src="./img/denizbank.png" alt="" />
           </button>
@@ -73,7 +73,7 @@
           </button>
         </div>
       </div>
-      <div class="vade-tutar">
+      <div class="vade-tutar d-none">
         <p class="display-5">Vade</p>
         <input
           type="text"
@@ -85,33 +85,36 @@
           id="tutar"
           class="col-12 input-group-text text-start input-box" />
       </div>
-      <button class="btn btn-danger mt-5" id="hesapla">Hesapla</button>
+      <button class="btn btn-danger mt-5 d-none" id="hesapla">Hesapla</button>
 
-      <table class="table">
+      <table class="table d-none">
         <thead>
-          <h1>Kredi Bilgileri</h1>
+          <h1 class="h1 text-center d-none">Kredi Bilgileri</h1>
         </thead>
         <tbody>
           <tr class="table-active">
             <td><b> Kredi Miktarı</b></td>
-            <td>??????</td>
+            <td id="kredi-miktar-tablo">??????</td>
             <td><b>Kredi Tipi</b></td>
-            <td>???????</td>
+            <td id="kredi-tipi-tablo">???????</td>
           </tr>
           <tr>
-            <td><b>Vade<</b>/td></td>
-            <td>??????</td>
+            <td><b>Vade</b></td>
+            <td id="vade-tablo">??????</td>
             <td><b>Faiz Oranı</b></td>
-            <td>??????</td>
+            <td id="faiz-tablo">??????</td>
           </tr>
           <tr>
             <td><b>Toplam Tutar</b></td>
-            <td>????????</td>
-            <td><b>Taksit</b></td>
-            <td>????????</td>
+            <td id="toplam-tablo">????????</td>
+            <td><b>Taksit Tutarı</b></td>
+            <td id="taksit-tablo">????????</td>
           </tr>
         </tbody>
       </table>
+      <button class="btn btn-danger mt-5 d-none" id="yeniden-hesapla">
+        Başa Dön
+      </button>
     </main>
 
     <script src="script.js"></script>
