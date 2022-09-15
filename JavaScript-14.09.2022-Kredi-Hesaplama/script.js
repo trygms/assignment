@@ -75,7 +75,7 @@ const bankaSec = function () {
   ustYazi.innerText = `Lütfen Banka Seçiniz`;
   document.querySelector(".bankalar").classList.remove("d-none");
   akbank.addEventListener("click", () => {
-    secilenBanka = "akbank";
+    secilenBanka = "Akbank";
     akbank.disabled = true;
     denizbank.disabled = true;
     enpara.disabled = true;
@@ -83,13 +83,13 @@ const bankaSec = function () {
     halkbank.disabled = true;
     ing.disabled = true;
     console.log(secilenBanka);
-    if (secilenBanka == "akbank") {
+    if (secilenBanka == "Akbank") {
       akbank.style.border = "1px solid red";
     }
     hesapla();
   });
   denizbank.addEventListener("click", () => {
-    secilenBanka = "denizbank";
+    secilenBanka = "Denizbank";
     akbank.disabled = true;
     denizbank.disabled = true;
     enpara.disabled = true;
@@ -97,13 +97,13 @@ const bankaSec = function () {
     halkbank.disabled = true;
     ing.disabled = true;
     console.log(secilenBanka);
-    if (secilenBanka == "denizbank") {
+    if (secilenBanka == "Denizbank") {
       denizbank.style.border = "1px solid red";
     }
     hesapla();
   });
   enpara.addEventListener("click", () => {
-    secilenBanka = "enpara";
+    secilenBanka = "Enpara";
     akbank.disabled = true;
     denizbank.disabled = true;
     enpara.disabled = true;
@@ -111,13 +111,13 @@ const bankaSec = function () {
     halkbank.disabled = true;
     ing.disabled = true;
     console.log(secilenBanka);
-    if (secilenBanka == "enpara") {
+    if (secilenBanka == "Enpara") {
       enpara.style.border = "1px solid red";
     }
     hesapla();
   });
   garanti.addEventListener("click", () => {
-    secilenBanka = "garanti";
+    secilenBanka = "Garanti BBVA";
     akbank.disabled = true;
     denizbank.disabled = true;
     enpara.disabled = true;
@@ -125,13 +125,13 @@ const bankaSec = function () {
     halkbank.disabled = true;
     ing.disabled = true;
     console.log(secilenBanka);
-    if (secilenBanka == "garanti") {
+    if (secilenBanka == "Garanti BBVA") {
       garanti.style.border = "1px solid red";
     }
     hesapla();
   });
   halkbank.addEventListener("click", () => {
-    secilenBanka = "halkbank";
+    secilenBanka = "Halkbank";
     akbank.disabled = true;
     denizbank.disabled = true;
     enpara.disabled = true;
@@ -139,13 +139,13 @@ const bankaSec = function () {
     halkbank.disabled = true;
     ing.disabled = true;
     console.log(secilenBanka);
-    if (secilenBanka == "halkbank") {
+    if (secilenBanka == "Halkbank") {
       halkbank.style.border = "1px solid red";
     }
     hesapla();
   });
   ing.addEventListener("click", () => {
-    secilenBanka = "ing";
+    secilenBanka = "ING Bank";
     akbank.disabled = true;
     denizbank.disabled = true;
     enpara.disabled = true;
@@ -153,7 +153,7 @@ const bankaSec = function () {
     halkbank.disabled = true;
     ing.disabled = true;
     console.log(secilenBanka);
-    if (secilenBanka == "ing") {
+    if (secilenBanka == "ING Bank") {
       ing.style.border = "1px solid red";
     }
     hesapla();
@@ -221,6 +221,7 @@ const hesapla = () => {
     document.querySelector("#faiz-tablo").innerText = `% ${faiz * 100}`;
     document.querySelector("#toplam-tablo").innerText = `${sonuc} ₺`;
     document.querySelector("#taksit-tablo").innerText = `${taksitTutarı} ₺`;
+    document.querySelector("#banka-adı-tablo").innerText = `${secilenBanka}`;
 
     ustYazi.innerText = "";
 
