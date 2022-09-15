@@ -17,6 +17,7 @@ const ing = document.getElementById("ing");
 devamButonu.addEventListener("click", () => {
   ustYazi.innerText = `Lütfen Kredi Türünü Seçiniz`;
   document.querySelector(".kredi-turu").classList.remove("d-none");
+  document.querySelector("#devam").classList.add("d-none");
 
   ihtiyac.addEventListener("click", () => {
     krediTuru = "Ihtiyac";
@@ -165,7 +166,17 @@ const hesapla = () => {
   ustYazi.innerText = `Lütfen İlgili Yerleri Doldurunuz`;
   document.querySelector("#hesapla").addEventListener("click", () => {
     const vade = Number(document.querySelector("#vade").value);
+    if (isNaN(vade) || vade == "") {
+      alert("Geçersiz bir değer girdiniz. Lütfen Tekrar Başlayın");
+      window.location.reload();
+    }
+
     const tutar = Number(document.querySelector("#tutar").value);
+
+    if (isNaN(tutar) || tutar == "") {
+      alert("Geçersiz bir değer girdiniz. Lütfen Tekrar Başlayın");
+      window.location.reload();
+    }
 
     //? Variables
     let faiz, taksitTutarı, toplamTutar;
@@ -195,10 +206,15 @@ const hesapla = () => {
     console.log(sonuc);
 
     document.querySelector(".table").classList.remove("d-none");
-    document.querySelector(".h1").classList.remove("d-none");
+    document.querySelector(".h1", ".mt-3").classList.remove("d-none");
     document.querySelector(".bankalar").classList.add("d-none");
     document.querySelector(".kredi-turu").classList.add("d-none");
     document.querySelector("#yeniden-hesapla").classList.remove("d-none");
+
+    document.querySelector("#devam").classList.add("d-none");
+    document.querySelector(".vade-tutar").classList.add("d-none");
+    document.querySelector("#hesapla").classList.add("d-none");
+
     document.querySelector("#kredi-miktar-tablo").innerText = `${tutar} ₺`;
     document.querySelector("#kredi-tipi-tablo").innerText = `${krediTuru}`;
     document.querySelector("#vade-tablo").innerText = `${vade}`;
@@ -206,8 +222,10 @@ const hesapla = () => {
     document.querySelector("#toplam-tablo").innerText = `${sonuc} ₺`;
     document.querySelector("#taksit-tablo").innerText = `${taksitTutarı} ₺`;
 
+    ustYazi.innerText = "";
+
     document
       .querySelector("#yeniden-hesapla")
-      .addEventListener("click", () => window.onload());
+      .addEventListener("click", () => window.location.reload());
   });
 };

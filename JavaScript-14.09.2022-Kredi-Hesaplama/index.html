@@ -21,16 +21,19 @@
   </head>
   <body>
     <main class="container d-flex flex-column">
-      <h1 class="d-flex justify-content-center text-center">
+      <h1
+        class="d-flex justify-content-center text-center align-items-center bg-dark text-light p-3">
         Captain Price Online Kredi Hesaplama Sitesine Hoşgeldiniz
       </h1>
-      <h2 class="text-center" id="ustYazi">
+      <h2 class="text-center align-items-center" id="ustYazi">
         Devam etmek için butona Tıklayınız
       </h2>
-      <button class="btn btn-danger" id="devam">Devam</button>
+      <button class="btn btn-danger mb-3 align-items-center" id="devam">
+        Devam
+      </button>
 
       <div
-        class="container d-flex justify-content-around col-12 kredi-turu d-none">
+        class="container d-flex justify-content-around kredi-turu d-none col-12">
         <div class="fs-5">
           <button class="button krediTuru" id="ihtiyac">
             <i class="fa-regular fa-money-bill-1 fa-5x"></i>
@@ -59,7 +62,7 @@
       </div>
       <div class="bankalar mt-4 mb-4 d-none">
         <div class="d-flex justify-content-around col-12">
-          <button id="akbank">
+          <button id="akbank" class="">
             <img src="./img/akbank.png" alt="" /> <br />
           </button>
           <button id="denizbank">
@@ -98,13 +101,13 @@
             <td><b>Kredi Tipi</b></td>
             <td id="kredi-tipi-tablo">???????</td>
           </tr>
-          <tr>
+          <tr class="table-active">
             <td><b>Vade</b></td>
             <td id="vade-tablo">??????</td>
             <td><b>Faiz Oranı</b></td>
             <td id="faiz-tablo">??????</td>
           </tr>
-          <tr>
+          <tr class="table-active">
             <td><b>Toplam Tutar</b></td>
             <td id="toplam-tablo">????????</td>
             <td><b>Taksit Tutarı</b></td>

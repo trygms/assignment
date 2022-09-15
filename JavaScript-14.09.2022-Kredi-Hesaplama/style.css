@@ -12,8 +12,8 @@
   transform: scale(0.9);
 }
 
-main {
-  background-color: green;
+main h1 {
+  border-radius: 15px;
 }
 
 .bankalar button {
@@ -38,4 +38,8 @@ main {
 
 .table {
   font-size: 2rem;
+}
+
+body {
+  background-color: bisque;
 }
