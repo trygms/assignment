@@ -205,7 +205,7 @@ const hesapla = () => {
     let sonuc = (taksitTutarı * vade).toFixed(2);
     console.log(sonuc);
 
-    document.querySelector(".table").classList.remove("d-none");
+    document.querySelector(".tables").classList.remove("d-none");
     document.querySelector(".h1", ".mt-3").classList.remove("d-none");
     document.querySelector(".bankalar").classList.add("d-none");
     document.querySelector(".kredi-turu").classList.add("d-none");
