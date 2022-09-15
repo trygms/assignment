@@ -217,7 +217,7 @@ const hesapla = () => {
 
     document.querySelector("#kredi-miktar-tablo").innerText = `${tutar} ₺`;
     document.querySelector("#kredi-tipi-tablo").innerText = `${krediTuru}`;
-    document.querySelector("#vade-tablo").innerText = `${vade}`;
+    document.querySelector("#vade-tablo").innerText = `${vade} Ay`;
     document.querySelector("#faiz-tablo").innerText = `% ${faiz * 100}`;
     document.querySelector("#toplam-tablo").innerText = `${sonuc} ₺`;
     document.querySelector("#taksit-tablo").innerText = `${taksitTutarı} ₺`;
