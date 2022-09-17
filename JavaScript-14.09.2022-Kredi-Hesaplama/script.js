@@ -161,7 +161,8 @@ const bankaSec = function () {
 };
 
 const hesapla = () => {
-  document.querySelector(".vade-tutar").classList.remove("d-none");
+  document.querySelector(".vade1").classList.remove("d-none");
+  document.querySelector(".tutar1").classList.remove("d-none");
   document.querySelector("#hesapla").classList.remove("d-none");
   ustYazi.innerText = `Lütfen İlgili Yerleri Doldurunuz`;
   document.querySelector("#hesapla").addEventListener("click", () => {
@@ -212,7 +213,8 @@ const hesapla = () => {
     document.querySelector("#yeniden-hesapla").classList.remove("d-none");
 
     document.querySelector("#devam").classList.add("d-none");
-    document.querySelector(".vade-tutar").classList.add("d-none");
+    document.querySelector(".vade1").classList.add("d-none");
+    document.querySelector(".tutar1").classList.add("d-none");
     document.querySelector("#hesapla").classList.add("d-none");
 
     document.querySelector("#kredi-miktar-tablo").innerText = `${tutar} ₺`;
