@@ -1,0 +1,19 @@
+p {
+  font-size: 2rem;
+}
+
+body {
+  background-color: bisque;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+input {
+  border: none;
+  font-size: 1rem;
+  height: 2rem;
+  border-radius: 10px;
+}
+
+textarea {
+}
