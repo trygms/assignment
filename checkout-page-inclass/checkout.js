@@ -3,10 +3,11 @@
 // const shippingFreePrice = 300;
 
 window.addEventListener("load", () => {
+  calculateCartPrice();
   //*set items to localStorage
-  //   localStorage.setItem("taxRate", taxRate);
-  //   localStorage.setItem("shippingPrice", shippingPrice);
-  //   localStorage.setItem("shippingFreePrice", shippingFreePrice);
+  localStorage.setItem("taxRate", taxRate);
+  localStorage.setItem("shippingPrice", shippingPrice);
+  localStorage.setItem("shippingFreePrice", shippingFreePrice);
   //*set items to sessionStorage
   //   sessionStorage.setItem("taxRate", taxRate);
   //   sessionStorage.setItem("shippingPrice", shippingPrice);
@@ -22,7 +23,14 @@ produvtDiv.addEventListener("click", (event) => {
       calculateProductPrice(event.target);
       calculateCartPrice();
     } else {
-      if (confirm("Product will be removed???")) {
+      if (
+        confirm(
+          `${
+            event.target.parentElement.parentElement.querySelector("h2")
+              .innerText
+          } will be deleted!!!`
+        )
+      ) {
         //*remove
         event.target.parentElement.parentElement.parentElement.remove();
         calculateCartPrice();
