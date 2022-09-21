@@ -1,6 +1,6 @@
-// const taxRate = 0.18;
-// const shippingPrice = 15;
-// const shippingFreePrice = 300;
+const taxRate = 0.18;
+const shippingPrice = 15;
+const shippingFreePrice = 300;
 
 window.addEventListener("load", () => {
   calculateCartPrice();
@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   localStorage.setItem("taxRate", taxRate);
   localStorage.setItem("shippingPrice", shippingPrice);
   localStorage.setItem("shippingFreePrice", shippingFreePrice);
+
   //*set items to sessionStorage
   //   sessionStorage.setItem("taxRate", taxRate);
   //   sessionStorage.setItem("shippingPrice", shippingPrice);
