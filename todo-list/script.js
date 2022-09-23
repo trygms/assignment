@@ -45,6 +45,13 @@ const createListElement = (newTodo) => {
   todoUl.appendChild(li);
 };
 
+todoUl.addEventListener("click", (e) => {
+  console.log(e.target);
+  if (e.target.classList.contains("fa-trash")) {
+    e.target.parentElement.remove();
+  }
+});
+
 todoInput.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
     addBtn.click();
