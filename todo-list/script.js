@@ -54,8 +54,12 @@ const createListElement = (newTodo) => {
 
 todoUl.addEventListener("click", (e) => {
   //   console.log(e.target);
+
+  const id = e.target.parentElement.getAttribute("id");
   if (e.target.classList.contains("fa-trash")) {
     e.target.parentElement.remove();
+    todos = todos.filter((todo) => todo.id != id);
+    localStorage.setItem("TODOS", JSON.stringify(todos));
   }
   if (e.target.classList.contains("fa-check")) {
     e.target.parentElement.classList.toggle("checked");
