@@ -94,6 +94,7 @@ document.querySelector(".container").addEventListener("click", (e) => {
       screenNow.innerText = sum / 100;
     } else {
       screenNow.innerText = Number(screenNow.innerText) / 100;
+      array[i] = Number(screenNow.innerText);
     }
   }
 
