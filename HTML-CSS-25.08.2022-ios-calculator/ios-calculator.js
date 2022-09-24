@@ -11,14 +11,12 @@ const screenSum = document.querySelector(".sum");
 document.querySelector(".container").addEventListener("click", (e) => {
   //? Operatörler
   if (e.target.classList.contains("add")) {
-    if (!isNaN(array[i])) {
-      number = "";
-      sum += array[i];
-      i++;
-      sum2 = sum;
-      screenSum.innerText = sum;
-      lastOpr = "add";
-    }
+    number = "";
+    sum += array[i];
+    i++;
+    sum2 = sum;
+    screenSum.innerText = sum;
+    lastOpr = "add";
   }
   if (e.target.classList.contains("sub")) {
     array[i] = 0 - array[i];
