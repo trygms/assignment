@@ -90,7 +90,11 @@ document.querySelector(".container").addEventListener("click", (e) => {
   }
 
   if (e.target.classList.contains("percent")) {
-    screenNow.innerText = sum / 100;
+    if (!sum == 0) {
+      screenNow.innerText = sum / 100;
+    } else {
+      screenNow.innerText = Number(screenNow.innerText) / 100;
+    }
   }
 
   if (e.target.classList.contains("pn")) {
