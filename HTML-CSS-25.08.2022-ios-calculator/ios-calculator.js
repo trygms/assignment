@@ -1,56 +1,102 @@
-let first = "";
-let second = "";
+let number = "";
+let array = [];
+let i = 0;
 let sum = 0;
 let sum2 = 1;
+let lastOpr = "";
 
 const screenNow = document.querySelector(".now");
 const screenSum = document.querySelector(".sum");
 
 document.querySelector(".container").addEventListener("click", (e) => {
-  //? Operators
-  function add() {}
+  //? Operatörler
   if (e.target.classList.contains("add")) {
-    second = Number(first);
-    first = "";
-    sum += second;
-    sum2 = sum;
-    screenSum.innerText = sum;
+    if (!isNaN(array[i])) {
+      number = "";
+      sum += array[i];
+      i++;
+      sum2 = sum;
+      screenSum.innerText = sum;
+      lastOpr = "add";
+    }
   }
   if (e.target.classList.contains("sub")) {
-    second = Number(first);
-    first = "";
-    sum -= second;
+    array[i] = 0 - array[i];
+    number = "";
+    if (i == 0) {
+      sum = array[i];
+      i++;
+    } else {
+      sum -= array[i];
+      i++;
+    }
     sum2 = sum;
     screenSum.innerText = sum;
-  }
-  if (e.target.classList.contains("x")) {
-    second = Number(first);
-    first = "";
-    sum2 *= second;
-    sum = sum2;
-    screenSum.innerText = sum;
-  }
-  if (e.target.classList.contains("division")) {
-    second = Number(first);
-    first = "";
-    sum2 /= second;
-    sum = sum2;
-    screenSum.innerText = sum;
+    lastOpr = "sub";
   }
 
-  //? Numbers
+  if (e.target.classList.contains("x")) {
+    number = "";
+    sum2 *= array[i];
+    i++;
+    sum = sum2;
+    screenSum.innerText = sum;
+    lastOpr = "x";
+  }
+
+  if (e.target.classList.contains("division")) {
+    number = "";
+    if (i == 0) {
+      sum2 = array[i];
+      i++;
+    } else {
+      sum2 /= array[i];
+      i++;
+    }
+    sum = sum2;
+    screenSum.innerText = sum.toFixed(5);
+    lastOpr = "division";
+  }
+
+  //? Sayı Bölümü
   if (e.target.classList.contains("number")) {
     if (e.target.classList.contains("equal")) {
-      screenNow.innerText = sum + Number(first);
-      first = "";
+      if (lastOpr == "add") {
+        sum += array[i];
+        screenNow.innerText = sum;
+      } else if (lastOpr == "sub") {
+        sum -= array[i];
+        screenNow.innerText = sum;
+      } else if (lastOpr == "x") {
+        sum *= array[i];
+        screenNow.innerText = sum;
+      } else if (lastOpr == "division") {
+        sum /= array[i];
+        screenNow.innerText = sum.toFixed(5);
+      }
     } else {
-      first += "" + `${e.target.innerText}`;
-      screenNow.innerText = first;
+      number += "" + `${e.target.innerText}`;
+      screenNow.innerText = number;
+      array[i] = Number(number);
+      console.log(array);
     }
   }
 
-  //? AC
   if (e.target.classList.contains("ac")) {
-    window.location.reload();
+    number = "";
+    sum = 0;
+    sum2 = 1;
+    screenSum.innerText = "";
+    screenNow.innerText = 0;
+    i = 0;
+  }
+
+  if (e.target.classList.contains("percent")) {
+    screenNow.innerText = sum / 100;
+  }
+
+  if (e.target.classList.contains("pn")) {
+    screenNow.innerText = Number(screenNow.innerText) * -1;
+    array[i] = Number(screenNow.innerText);
   }
 });

@@ -16,6 +16,7 @@
   align-items: flex-end; */
   font-size: 3rem;
   font-family: Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 .now {
