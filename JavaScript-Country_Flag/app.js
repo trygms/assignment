@@ -87,11 +87,11 @@ const renderCountries = (data) => {
 
 //? Game Start
 function gameStart() {
-  document.querySelector(".day-night").addEventListener("click", () => {
+  document.querySelector("#day-night").addEventListener("click", () => {
     document.querySelector("#body").classList.toggle("bg-light");
     document.querySelector("#body").classList.toggle("text-dark");
-    document.querySelector(".day-night").classList.add("btn-outline-dark");
-    document.querySelector(".day-night").classList.remove("btn-outline-light");
+    document.querySelector("#day-night").classList.toggle("btn-outline-dark");
+    // document.querySelector("#day-night").classList.remove("btn-outline-light");
   });
   document.querySelector(".play-button").addEventListener("click", () => {
     document.querySelector(".day-night").classList.add("d-none");
