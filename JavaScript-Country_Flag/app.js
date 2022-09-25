@@ -110,7 +110,7 @@ function gameStart() {
       document.querySelector(".timer").innerText = `${counter}`;
       if (counter < 11) {
         document.querySelector(".timer").classList.add("text-danger");
-        document.querySelector(".timer").classList.add("fs-2");
+        document.querySelector(".timer").classList.add("display-1");
       }
       if (counter < 1) {
         clearInterval(intervalId);
