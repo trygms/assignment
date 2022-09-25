@@ -119,7 +119,7 @@ function gameStart() {
 
         document.querySelector(".result").innerHTML = `Your Score : ${
           score * 10
-        } points <br> You can do better 😊<br> C'mon try again`;
+        } points <br> You can do better 😊`;
         document.querySelector(".timer").classList.add("d-none");
         if (score * 10 > bestScore * 10) {
           localStorage.setItem("bestScore", score * 10);
