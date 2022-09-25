@@ -61,7 +61,7 @@ const renderCountries = (data) => {
 
   countryDiv.innerHTML = `
     <div class="card mx-auto m-3 shadow-lg" style="width: 21rem;">
-      <img src="${data[randomCountryNumber].flags.svg}" class="card-img-top" alt="..." max-height="170px">
+      <img src="${data[randomCountryNumber].flags.svg}" class="card-img-top" alt="..."  style="max-height:168px">
       <div class="card-body bg-dark">
         <button class="button btn1">${data[randomNumber1].name.common}</button> 
         <button class="button btn2">${data[randomNumber2].name.common}</button>
