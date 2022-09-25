@@ -95,7 +95,7 @@ function gameStart() {
   });
   document.querySelector(".play-button").addEventListener("click", () => {
     document.querySelector(".day-night").classList.add("d-none");
-    let currentBestScore = localStorage.getItem("bestScore");
+    let currentBestScore = localStorage.getItem("bestScore") || 0;
     document.querySelector(".first").classList.add("d-none");
     document.querySelector(".game").classList.remove("d-none");
     document.querySelector(
