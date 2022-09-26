@@ -1,6 +1,7 @@
 let randomNumber1, randomNumber2, randomNumber3, randomNumber4;
 let randomNum, randomCountryNumber;
 let score = 0,
+  wrongAnswer = 0,
   question = 0,
   counter = 0,
   bestScore = 0;
@@ -79,6 +80,11 @@ const renderCountries = (data) => {
       fetchCountryByName();
     } else {
       question++;
+      wrongAnswer++;
+      if (wrongAnswer === 4) {
+        score--;
+        wrongAnswer = 0;
+      }
       document.querySelector(".tables").innerText = `${score} / ${question}`;
       fetchCountryByName();
     }
