@@ -8,6 +8,7 @@
   border-radius: 5px;
   transition: all 0.5s;
   font-family: Helvetica, sans-serif;
+  padding: 0.2rem;
 }
 
 .button:hover {
