@@ -86,6 +86,19 @@ button.addEventListener("click", () => {
   fetchCountryByName();
 });
 
+inputBox.addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    resultDiv.classList.remove("d-none");
+    document.querySelector(".warning").classList.add("d-none");
+    document.querySelector(".clear-all").classList.remove("d-none");
+
+    city = inputBox.value;
+    inputBox.value = "";
+
+    fetchCountryByName();
+  }
+});
+
 document.querySelector(".clear-all").addEventListener("click", () => {
   resultDiv.classList.add("d-none");
   document.querySelector(".clear-all").classList.add("d-none");
