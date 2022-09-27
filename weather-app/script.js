@@ -76,9 +76,18 @@ const getStarted = (data) => {
 };
 
 button.addEventListener("click", () => {
+  resultDiv.classList.remove("d-none");
   document.querySelector(".warning").classList.add("d-none");
+  document.querySelector(".clear-all").classList.remove("d-none");
+
   city = inputBox.value;
   inputBox.value = "";
 
   fetchCountryByName();
+});
+
+document.querySelector(".clear-all").addEventListener("click", () => {
+  resultDiv.classList.add("d-none");
+  document.querySelector(".clear-all").classList.add("d-none");
+  document.querySelector(".warning").classList.remove("d-none");
 });
