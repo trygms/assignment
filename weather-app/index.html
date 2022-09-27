@@ -11,11 +11,21 @@
       crossorigin="anonymous" />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container container-fluid">
-      <input type="text" class="input-box col-12 col-lg-7" />
+      <div class="form__group field col-12 col-lg-7">
+        <input
+          type="input"
+          class="form__field input-box"
+          placeholder="Name"
+          name="name"
+          id="name"
+          required />
+        <label for="name" class="form__label ms-1">Enter a city</label>
+      </div>
       <br />
       <div class="btn btn-primary click-me col-12 col-lg-2">OK</div>
       <div class="row">
