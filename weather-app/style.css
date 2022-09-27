@@ -1,0 +1,45 @@
+body {
+  background-image: url("./Black-Amoled-Wallpaper-HD-238.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.input-box {
+  /* width: 30vw; */
+  margin: 1rem auto;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-box:hover {
+  border: 1px solid green;
+}
+.click-me {
+  /* width: 15vw; */
+  margin: 1rem auto;
+  border: 2px solid white;
+  /* border: none; */
+  background-color: transparent !important;
+}
+.click-me:hover {
+  color: blue;
+  transform: scale(0.97);
+}
+
+.result {
+  margin: 1rem auto;
+}
+
+.span-text {
+  font-weight: bold;
+}
