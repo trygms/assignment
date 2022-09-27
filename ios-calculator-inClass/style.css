@@ -60,8 +60,9 @@
   cursor: pointer;
   user-select: none;
   background: linear-gradient(90deg, black, rgb(100, 100, 100));
-  box-shadow: inset -5px -5px rgba(0, 0, 0, 0.705),
-    inset 5px 5px rgba(0, 0, 0, 0.568), 5px 5px 15px black;
+  box-shadow: inset -5px -5px 5px rgb(0, 0, 0), inset 5px 5px 5px rgb(0, 0, 0),
+    5px 5px 15px black;
+
   position: relative;
   transition: all 0.3s;
 }
