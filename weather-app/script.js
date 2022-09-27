@@ -100,7 +100,5 @@ inputBox.addEventListener("keydown", (e) => {
 });
 
 document.querySelector(".clear-all").addEventListener("click", () => {
-  resultDiv.classList.add("d-none");
-  document.querySelector(".clear-all").classList.add("d-none");
-  document.querySelector(".warning").classList.remove("d-none");
+  window.location.reload();
 });
