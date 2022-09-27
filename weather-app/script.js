@@ -75,16 +75,8 @@ const getStarted = (data) => {
   i++;
 };
 
-button.addEventListener("keydown", (e) => {
-  if (e.keyCode === "Enter") {
-    city = inputBox.value;
-    inputBox.value = "";
-
-    fetchCountryByName();
-  }
-});
-
 button.addEventListener("click", () => {
+  document.querySelector(".warning").classList.add("d-none");
   city = inputBox.value;
   inputBox.value = "";
 
