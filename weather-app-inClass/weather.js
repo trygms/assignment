@@ -69,11 +69,12 @@ const getWeatherDataFromApi = async () => {
 
     //? append vs prepend
     list.prepend(createdLi);
-    form.reset();
   } catch (error) {
     msg.innerText = `404 (City Not Found)`;
     setTimeout(() => {
       msg.innerText = "";
     }, 5000);
   }
+
+  form.reset();
 };
