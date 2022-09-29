@@ -4,7 +4,11 @@ const colors = () => {
   const blue = document.getElementById("blue").value;
 
   document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
-
+  if (red > 128 || blue > 128 || green > 128) {
+    clock.style.color = `rgb(${255 - red},${255 - green},${255 - blue})`;
+  } else {
+    clock.style.color = `rgb(${red},${green},${blue})`;
+  }
   document.getElementById("text").innerText = `rgb(${red},${green},${blue})`;
 };
 
