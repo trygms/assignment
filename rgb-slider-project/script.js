@@ -10,6 +10,32 @@ const colors = () => {
 
 const hex = document.getElementById("hex");
 
-document.querySelector(".btn").addEventListener("click", () => {
-  let first, second, third, fourth, fifth, sixth;
-});
+const clock = document.getElementById("clock");
+
+const showTime = () => {
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let session = "AM";
+  let time;
+
+  if (hours == 0) {
+    hours = 12;
+  }
+  if (hours > 12) {
+    hours -= 12;
+    session = "PM";
+  }
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  time = `${hours}:${minutes}:${seconds} ${session}`;
+
+  clock.innerText = time;
+
+  setTimeout(showTime, 1000);
+};
+
+showTime();
