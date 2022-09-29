@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RGB Color Slider | Captain Price</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="container2">
+      <div class="colors">
+        R<input
+          type="range"
+          id="red"
+          min="0"
+          max="255"
+          value="0"
+          oninput="colors()" />
+      </div>
+      <div class="colors">
+        G<input
+          type="range"
+          id="green"
+          min="0"
+          max="255"
+          value="0"
+          oninput="colors()" />
+      </div>
+      <div class="colors">
+        B<input
+          type="range"
+          id="blue"
+          min="0"
+          max="255"
+          value="0"
+          oninput="colors()" />
+      </div>
+      <span class="span" id="text">rgb(0, 0, 0)</span>
+      <!-- <div class="btn btn-primary">Generate Hex Code</div> -->
+      <span class="span2" id="hex"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
