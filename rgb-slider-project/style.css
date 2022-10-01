@@ -47,7 +47,7 @@ input {
   background-color: rgb(0, 92, 200);
   color: white;
   padding: 12px 30px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: 0.7px;
   border-radius: 5px;
 }
@@ -56,4 +56,34 @@ input {
   font-family: "Space Mono", monospace;
 
   font-size: 2rem;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: rgb(107, 105, 105);
+    opacity: 0.8;
+  }
+
+  input[type="range"]:hover {
+    opacity: 1;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 1rem;
+
+    background: red;
+    box-shadow: -40px 0 0 40px #43e5f7;
+  }
 }
