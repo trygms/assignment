@@ -2,7 +2,6 @@ const colors = () => {
   const red = document.getElementById("red").value;
   const green = document.getElementById("green").value;
   const blue = document.getElementById("blue").value;
-  const abc = document.querySelector('input[type="range"]');
 
   document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
   if (red > 128 || blue > 128 || green > 128) {
@@ -11,8 +10,6 @@ const colors = () => {
     clock.style.color = `rgb(${red},${green},${blue})`;
   }
   document.getElementById("text").innerText = `rgb(${red},${green},${blue})`;
-
-  abc.innerHTML = ".slider::-webkit-slider-thumb  {background :blue;}";
 };
 
 const hex = document.getElementById("hex");
