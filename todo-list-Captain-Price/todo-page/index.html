@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List | Captain Price</title>
+  </head>
+  <body>
+    <a href="../index.html"><i class="fa-solid fa-turn-up"></i></a>
+    <div class="main">
+      <div class="container">
+        <h1>Captain Price Todo List Page</h1>
+        <h2 class="welcome"></h2>
+        <div class="todo-main">
+          <label for="todo" class="label">Todo</label>
+          <input type="text" name="todo" id="todo-input" class="todo-inp" />
+          <br />
+          <label for="todo-desc">Description</label>
+          <input
+            type="text"
+            name="todo-desc"
+            class="label"
+            id="todo-desc-input"
+            class="todo-desc-inp" />
+          <div class="inf">
+            <small for="" class="clock">sdas</small>
+
+            <small for="" class="date">sdas</small>
+          </div>
+          <button class="todo-add" id="todo-button" type="submit">Add</button>
+        </div>
+      </div>
+      <div class="ul-container"></div>
+      <ul class="todo-ul-list" id="todo-ul"></ul>
+    </div>
+    <script src="scrip.js"></script>
+  </body>
+</html>
