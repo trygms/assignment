@@ -8,8 +8,6 @@ const localName = localStorage.getItem("Name");
 
 document.querySelector(".welcome").innerText = `Welcome ${localName}`;
 
-// todos dizisini localStorage'daki veriler ile guncelle
-//! eger localStroge'de todos adinda bir item bulunmaz ise bos array atamasi yap.
 let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
 console.log(todos);
 
@@ -35,7 +33,7 @@ todoButton.addEventListener("click", (event) => {
     };
     addNewTodoAtList(todoObj);
 
-    //?Yeni olusturulan todo'yu diziye sakla
+    //?Yeni olusturulan todo diziye saklandi
     todos.push(todoObj);
 
     localStorage.setItem("TODOS", JSON.stringify(todos));
@@ -92,15 +90,13 @@ todoUl.addEventListener("click", (e) => {
     //? Dizinin ilgili elementini sil
     todos = todos.filter((todo) => todo.id !== Number(id));
 
-    //? todos dizisinin son halini localStorage'e sakla
+    //? todos dizisinin son halini localStorage'e saklandi
     localStorage.setItem("TODOS", JSON.stringify(todos));
   } else if (e.target.classList.contains("fa-check")) {
-    //! event, bir okey butonundan geldi ise
     //? ilgili li elementinde checked adinda bir class'i varsa bunu sil
     //?  aksi takdirde ekle (DOM)
     e.target.parentElement.classList.toggle("completed");
 
-    // todos dizisindeki ilgili elementin completed kismini guncelle
     todos.map((todo, index) => {
       if (todo.id == id) {
         todos[index].completed = !todos[index].completed;
@@ -108,7 +104,6 @@ todoUl.addEventListener("click", (e) => {
     });
     console.log(todos);
 
-    //?todos dizisinin son halini localStorage'e sakla
     localStorage.setItem("TODOS", JSON.stringify(todos));
   }
 });
