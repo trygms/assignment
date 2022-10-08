@@ -73,10 +73,6 @@ button:hover {
   background-color: green;
 }
 
-.ul-container {
-  /* border: 2px solid red; */
-}
-
 .todo-ul-list {
   list-style: none;
   width: 80%;
@@ -140,4 +136,24 @@ li.completed p {
 .inf {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  h1,
+  h2 {
+    font-size: 1.2rem;
+  }
+  .fa-solid,
+  .fa-check,
+  .fa-trash {
+    font-size: 0.9rem;
+  }
+  .todo-ul-list {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .clock,
+  .date {
+    font-size: 0.8rem;
+  }
 }

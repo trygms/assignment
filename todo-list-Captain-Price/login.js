@@ -28,11 +28,11 @@ document.querySelector(".btn-login").addEventListener("click", () => {
     // document.querySelector(".welcome").innerText = `Welcome ${localName}`;
     document.querySelector(".sig").classList.add("d-none");
     document.querySelector(".log").classList.add("d-none");
-    document.querySelector(".welcome").innerText = `Welcome ${localName}`;
+    document.querySelector(".welcome").innerText = `Welcome \n ${localName}`;
     document.querySelector(".welcome").style.color = "white";
     setTimeout(function () {
       window.location.href = `./todo-page/index.html`;
-    }, 5000);
+    }, 4000);
   } else {
     document.querySelector(".welcome").innerText = `Wrong Username or Password`;
     document.querySelector(".welcome").style.color = "red";
